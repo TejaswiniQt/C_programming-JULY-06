@@ -1,0 +1,39 @@
+// Transpose of matrix 
+
+#include<stdio.h>
+#define ROW 3 
+#define COL 2 
+
+int main()
+{
+    int arr[ROW][COL],i,j;
+    printf("Enter array elements: ");
+    for(i=0; i<ROW; i++)
+    {
+        for(j=0; j<COL; j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    
+    printf("Array before transpose: \n");
+    for(i=0; i<ROW; i++)
+    {
+        for(j=0; j<COL; j++)
+        {
+            printf("%d\t",arr[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Array after transpose: \n");
+    for(i=0; i<COL; i++)
+    {
+        for(j=0; j<ROW; j++)
+        {
+            printf("%d\t",arr[j][i]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}

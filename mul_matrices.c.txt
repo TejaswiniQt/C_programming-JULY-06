@@ -1,0 +1,66 @@
+// Multiplication of two matrices 
+
+#include<stdio.h>
+#define ROW 3 
+#define COL 3 
+
+int main()
+{
+    int arr1[ROW][COL], arr2[ROW][COL], arr3[ROW][COL],i,j,k;
+    printf("Enter array1 elements: ");
+    for(i=0; i<ROW; i++)
+    {
+        for(j=0; j<COL; j++)
+        {
+            scanf("%d",&arr1[i][j]);
+        }
+    }
+    printf("Enter array2 elements: ");
+    for(i=0; i<ROW; i++)
+    {
+        for(j=0; j<COL; j++)
+        {
+            scanf("%d",&arr2[i][j]);
+        }
+    }
+    for(i=0; i<ROW; i++)
+    {
+        for(j=0; j<COL; j++)
+        {
+            arr3[i][j] = 0;
+            for(k=0; k<COL; k++)
+            {
+                arr3[i][j] += arr1[i][k] * arr2[k][i];
+            }
+        }
+    }
+    printf("array1: \n");
+    for(i=0; i<ROW; i++)
+    {
+        for(j=0; j<COL; j++)
+        {
+            printf("%d\t",arr1[i][j]);
+        }
+        printf("\n");
+    }
+    printf("array2: \n");
+    for(i=0; i<ROW; i++)
+    {
+        for(j=0; j<COL; j++)
+        {
+            printf("%d\t",arr2[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Multiplication of arr1 and arr2 is: \n");
+    for(i=0; i<ROW; i++)
+    {
+        for(j=0; j<COL; j++)
+        {
+            printf("%d\t",arr3[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}

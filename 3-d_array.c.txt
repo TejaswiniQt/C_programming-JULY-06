@@ -1,0 +1,35 @@
+// 3-D array
+
+#include<stdio.h>
+
+int main()
+{
+    int arr[2][3][2],i,j,k;
+    printf("Enter array elements: ");
+    for(i=0; i<2; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            for(k=0; k<2; k++)
+            {
+                scanf("%d",&arr[i][j][k]);
+            }
+        }
+    }
+    
+    printf("display array: \n");
+     for(i=0; i<2; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            for(k=0; k<2; k++)
+            {
+                printf("%d\t",arr[i][j][k]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}S

@@ -1,0 +1,49 @@
+// Program to serach smallest element in the array and swap it with 0th position in the array
+
+#include<stdio.h>
+#define SIZE 10
+
+int smallest(int arr[]);
+
+int main()
+{
+    int arr[SIZE],i,index,temp;
+    printf("Enter array elements: ");
+    for(i=0; i<SIZE; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("Entered array is: ");
+    for(i=0; i<SIZE; i++)
+    {
+        printf("%d\t",arr[i]);
+    }
+    printf("\n");
+    index = smallest(arr);
+    printf("The smallest element in the array is: %d\n",arr[index]);
+    temp = arr[0];
+    arr[0] = arr[index];
+    arr[index] = temp;
+    printf("Array after swapping smallest element in 0th position:\n");
+    for(i=0; i<SIZE; i++)
+    {
+        printf("%d\t",arr[i]);
+    }
+    
+    return 0;
+}
+
+int smallest(int arr[])
+{
+    int i,index, smallest = arr[0];
+    for(i=0; i<SIZE; i++)
+    {
+            if(arr[i] < smallest)
+            {
+                smallest = arr[i];
+                index = i;
+            }
+    }
+    return index;
+    return 0;
+}
